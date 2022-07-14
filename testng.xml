@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="FormDetails">
+<listeners>
+	<listener class-name="com.demoqa.TestSteps.TestListener"></listener>
+
+	<listener class-name="com.demoqa.TestSteps.TestTransformer"></listener>
+</listeners>
+  <test thread-count="5" name="EnterFormDetail">
+	<packages>
+			<package name="com.demoqa.*"/>
+			<!--<package name="com.qa.loan"></package>-->
+		</packages>
+  </test> <!-- EnterFormDetail -->
+</suite> <!-- FormDetails -->

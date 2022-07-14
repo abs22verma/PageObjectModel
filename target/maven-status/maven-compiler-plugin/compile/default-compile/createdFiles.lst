@@ -1,0 +1,6 @@
+com\demoqa\utility\Utilities.class
+com\demoqa\utility\ExcelUtility.class
+com\demoqa\ObjRepo\FormPage.class
+com\demoqa\utility\Config.class
+com\demoqa\common\BasePage.class
+com\demoqa\utility\Driver.class

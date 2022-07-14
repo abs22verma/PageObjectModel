@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [FormDetails]">
+  <listeners>
+    <listener class-name="com.demoqa.TestSteps.TestListener"/>
+    <listener class-name="com.demoqa.TestSteps.TestTransformer"/>
+  </listeners>
+  <test thread-count="5" name="EnterFormDetail(failed)">
+    <classes>
+      <class name="com.demoqa.testcases.Testing">
+        <methods>
+          <include name="TC01"/>
+        </methods>
+      </class> <!-- com.demoqa.testcases.Testing -->
+    </classes>
+  </test> <!-- EnterFormDetail(failed) -->
+</suite> <!-- Failed suite [FormDetails] -->
