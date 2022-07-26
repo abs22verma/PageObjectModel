@@ -29,7 +29,7 @@ public class Testing {
 		driver = Driver.getDriver();
 	}
 	
-	@Test
+	//@Test
 	public void TC01() {
 		try {
 		if(BasePage.findElementById("closeLargeModal").isDisplayed()) {
@@ -50,7 +50,7 @@ public class Testing {
 		FormDetailsPage.enterValueByID("currentAddress", "H.No 123, 2nd cross, 3rd Street, MP");
 		FormDetailsPage.selectDropdownValue("state","Haryana");
 		FormDetailsPage.selectDropdownValue("city","Panipat");
-		FormDetailsPage.clickOnSubmit("submit");
+		FormDetailsPage.clickOnSubmit("Submit");
 		FormDetailsPage.verification("Abhi verma,abhi.verma@gmail.com,Male,1472583690");
 		
 	}
@@ -87,6 +87,8 @@ public class Testing {
 		FormDetailsPage.enterValueByID("currentAddress", address);
 		FormDetailsPage.selectDropdownValue("state",state);
 		FormDetailsPage.selectDropdownValue("city",city);
+	
+		//From
 		FormDetailsPage.clickOnSubmit("submit");
 		//FormDetailsPage.verification("Abhi verma,abhi.verma@gmail.com,Male,1472583690");
 		
@@ -98,7 +100,7 @@ public class Testing {
 		return data;
 	}
 	
-	//@Test
+	@Test
 	public void TC03() {
 		FormPage fp = new FormPage(Driver.getDriver());
 		try {

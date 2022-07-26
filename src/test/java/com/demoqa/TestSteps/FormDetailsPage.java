@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -31,7 +32,8 @@ public class FormDetailsPage {
 	}
 	
 	public static void clickOnSubmit(String id) {
-		BasePage.click(BasePage.findElementById(id));
+		BasePage.keyPress("Submit");
+		//BasePage.click(BasePage.findElementById(id));
 	}
 	
 	public static void selectGender(String gender) {
@@ -78,10 +80,13 @@ public class FormDetailsPage {
 
 	public static void selectDropdownValue(String field, String value) {
 		BasePage.click(BasePage.findElementById(field));
+		
 		try {
 			Thread.sleep(1000);
-			BasePage.actionClick(BasePage.findElementByXpathText(value));
+			//BasePage.actionClick(BasePage.findElementByXpathText(value));
+			BasePage.keyPress("Tab");
 			Thread.sleep(1000);
+			
 		}catch(InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -94,6 +99,7 @@ public class FormDetailsPage {
 		for(int i=1,j=0;i<=4;i++,j++) {
 			String text = Driver.getDriver().findElement(By.xpath("//table//tr["+i+"]//td[2]")).getText();
 			Assert.assertEquals(text, value[j]);
+			//Assert.assertTrue(BasePage.isElementPresent(""));
 		}
 		
 	}

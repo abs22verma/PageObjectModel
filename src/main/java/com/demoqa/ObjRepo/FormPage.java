@@ -20,6 +20,8 @@ WebDriver driver = null;
 	@FindBy(how = How.ID, using="firstName")
 	public WebElement firstName;
 	
+	// public WebElement firstName = driver.findElement(By.id("test"));
+	
 	@FindBy(id="lastName")
 	public WebElement lastName;
 	
@@ -33,6 +35,8 @@ WebDriver driver = null;
 	//<input id="gender1" class="Male"/>
 	public WebElement gender;
 	
+	
+	
 	@FindBy(id="userNumber")
 	public WebElement mobile;
 	
@@ -40,7 +44,7 @@ WebDriver driver = null;
 	@FindAll({
 		@FindBy(id="gender1"),
 		@FindBy(className ="Male")
-	})
+	})//driver.findElements
 	public WebElement dob;
 	
 	public WebElement subject;
